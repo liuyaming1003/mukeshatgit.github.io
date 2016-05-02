@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": “YUJQWV4T28.com.movingpin.tracking.consumer",
+                "paths": [ “/test/*”]
+            }
+        ]
+    }
+}
