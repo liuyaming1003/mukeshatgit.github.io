@@ -5,6 +5,10 @@
             {
                 "appID": “YUJQWV4T28.com.movingpin.tracking.consumer",
                 "paths": [ “*”]
+            },
+            {
+            	"appID": "Y5WJ4B7E4Z.com.movingpin.tracking.consumer",
+                "paths": [ “*”]
             }
         ]
     }
