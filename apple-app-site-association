@@ -3,12 +3,12 @@
         "apps": [],
         "details": [
             {
-                "appID": “YUJQWV4T28.com.movingpin.tracking.consumer",
-                "paths": [ “*”]
+                "appID": "YUJQWV4T28.com.movingpin.tracking.consumer",
+                "paths": [ "/wwdc/news/", "/videos/wwdc/2015/*"]
             },
             {
-            	"appID": "Y5WJ4B7E4Z.com.movingpin.tracking.consumer",
-                "paths": [ “*”]
+                "appID": "Y5WJ4B7E4Z.com.movingpin.tracking.consumer",
+                "paths": [ "*" ]
             }
         ]
     }
