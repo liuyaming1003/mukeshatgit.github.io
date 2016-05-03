@@ -8,7 +8,7 @@
 function getValue(key) {
     var result = "Not found",
         tmp = [];
-    var items = location.search.substr(0).split("&");
+    var items = location.search.substr(1).split("&");
     for (var index = 0; index < items.length; index++) {
         tmp = items[index].split("=");
         if (tmp[0] === key) result = decodeURIComponent(tmp[1]);
@@ -27,7 +27,7 @@ if (location.search.match(/redirect/)) {
 		document.writeln("Wrong Parameter...");
 	} else {
 		document.cookie = 'page=' + value + ';max-age=3600';
-		location.href = "movingpin://page/" + m;
+		location.href = "movingpin://page/" + value;
 	}
 }
 
