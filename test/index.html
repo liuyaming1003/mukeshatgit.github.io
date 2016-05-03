@@ -13,7 +13,7 @@ function getValue(key) {
         tmp = items[index].split("=");
         if (tmp[0] === key) result = decodeURIComponent(tmp[1]);
     }
-    document.writeln(result);
+    //document.writeln(result);
     return result;
 }
 
@@ -24,9 +24,9 @@ function getCookie(name) {
 }
 
 var value = getValue("page");
-document.writeln(value);
+//document.writeln(value);
 var m = getCookie("page");
-document.writeln(m);
+//document.writeln(m);
 if (location.search.match(/redirect/)) {
   location.href = "movingpin://page/" + m;
 } else {
