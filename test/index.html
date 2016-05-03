@@ -17,10 +17,16 @@ function getValue(key) {
     return result;
 }
 
-var value = getValue("page");
-var c = document.cookie;
-var m = c.match(/page=(\w+)/);
+function getCookie(name) {
+    var re = new RegExp(name + "=([^;]+)");
+    var value = re.exec(document.cookie);
+    return (value != null) ? unescape(value[1]) : null;
+}
 
+var value = getValue("page");
+document.writeln(value);
+var m = getCookie("page");
+document.writeln(m);
 if (location.search.match(/redirect/)) {
   location.href = "movingpin://page/" + m;
 } else {
