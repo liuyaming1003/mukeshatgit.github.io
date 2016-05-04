@@ -24,10 +24,10 @@ function getCookie(name) {
 }
 
 function startIThrown(value){
-  document.location = "movingpin://page/" + value;
+  location.href = "movingpin://page/" + value;
   setTimeout(function(){
     if(confirm('You do not seem to have App installed, do you want to go download it now?')){
-      document.location = 'https://i.diawi.com/i8PndK';
+      location.href = 'https://i.diawi.com/i8PndK';
     }
   }, 1000);
 }
