@@ -23,6 +23,26 @@ function getCookie(name) {
     return (value != null) ? unescape(value[1]) : null;
 }
 
+var timeout;
+
+function preventPopup() {
+    clearTimeout(timeout);
+    timeout = null;
+    window.removeEventListener('pagehide', preventPopup);
+}
+
+function openApp(appurl) {    
+    $('<iframe />')
+    .attr('src', appurl)
+    .attr('style', 'display:none;')
+    .appendTo('body');
+
+    timeout = setTimeout(function() {
+            document.location = "https://i.diawi.com/i8PndK";
+    }, 500);
+    window.addEventListener('pagehide', preventPopup);
+}
+
 function startIThrown(value){
   location.href = "movingpin://page/" + value;
   setTimeout(function(){
@@ -43,7 +63,7 @@ if (location.search.match(/redirect/)) {
 		document.writeln("Wrong Parameter...");
 	} else {
 		document.cookie = 'page=' + value + ';max-age=3600';
-        startIThrown(value);
+        openApp("movingpin://page/" + value);
 	}
 }
 
