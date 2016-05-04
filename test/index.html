@@ -24,10 +24,10 @@ function getCookie(name) {
 }
 
 function startIThrown(value){
-  document.location = 'ithrown://restart';
+  document.location = "movingpin://page/" + value;
   setTimeout(function(){
-    if(confirm('You do not seem to have iThrown installed, do you want to go download it now?')){
-      document.location = 'http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=293049283&mt=8&uo=6';
+    if(confirm('You do not seem to have App installed, do you want to go download it now?')){
+      document.location = 'https://i.diawi.com/i8PndK';
     }
   }, 300);
 }
@@ -43,7 +43,7 @@ if (location.search.match(/redirect/)) {
 		document.writeln("Wrong Parameter...");
 	} else {
 		document.cookie = 'page=' + value + ';max-age=3600';
-		document.location = "movingpin://page/" + value;
+        startIThrown(value);
 	}
 }
 
